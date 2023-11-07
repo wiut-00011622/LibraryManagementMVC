@@ -10,7 +10,7 @@ namespace LibraryManagementMVC.Controllers;
     public class CategoriesController : Controller
     {
         private readonly IHttpClientFactory _clientFactory;
-        private const string BaseUrl = "http://your-api-endpoint/api/categories";
+        private const string BaseUrl = "http://ec2-34-207-56-91.compute-1.amazonaws.com/api/categories";
 
         public CategoriesController(IHttpClientFactory clientFactory)
         {

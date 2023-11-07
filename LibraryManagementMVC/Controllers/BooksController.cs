@@ -11,7 +11,7 @@ namespace LibraryManagementMVC.Controllers;
     public class BooksController : Controller
     {
         private readonly IHttpClientFactory _clientFactory;
-        private const string BaseUrl = "http://your-api-endpoint/api/";
+        private const string BaseUrl = "http://ec2-34-207-56-91.compute-1.amazonaws.com/api/Books";
 
         public BooksController(IHttpClientFactory clientFactory)
         {

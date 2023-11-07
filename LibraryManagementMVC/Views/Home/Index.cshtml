@@ -1,8 +1,37 @@
-﻿@{
+﻿@model IEnumerable<LibraryManagementMVC.Models.Book>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to the Library Management System</h1>
+    <p>Find your next book to read:</p>
 </div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Author.FirstName</td>
+            <td>@book.Category.Name</td>
+            <td>
+                <!-- Add actions like View, Edit, Delete as needed -->
+                <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id">View</a> |
+                <a asp-controller="Books" asp-action="Edit" asp-route-id="@book.Id">Edit</a> |
+                <a asp-controller="Books" asp-action="Delete" asp-route-id="@book.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

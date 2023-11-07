@@ -10,7 +10,7 @@ namespace LibraryManagementMVC.Controllers;
     public class AuthorsController : Controller
     {
         private readonly IHttpClientFactory _clientFactory;
-        private const string BaseUrl = "http://your-api-endpoint/api/authors";
+        private const string BaseUrl = "http://ec2-34-207-56-91.compute-1.amazonaws.com/api/authors";
 
         public AuthorsController(IHttpClientFactory clientFactory)
         {
