@@ -1,0 +1,15 @@
+@model LibraryManagementMVC.Models.Category
+
+<h2>Delete Category</h2>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" disabled />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Cancel</a>
+    </div>
+</form>
